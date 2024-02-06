@@ -24,7 +24,7 @@
         <span>Hello, World!</span>
     </header>
     <main>
-        <h1>Hello World!</h1>
+        <?php echo 'Hello, world!';?>
         
     </main>
     <footer>
