@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <form action="https://httpbin.org/post" method="post">
+        <!-- <input type="hidden" name="method" value="DELETE"> -->
+        <div>
+          <label for="name"> Enter yout name </label>
+          <input type="text" name="name" id="name" />
+        </div>
+
+        <div>
+          <label for="gender"> Enter yout gender </label>
+          <input type="text" name="gender" id="gender" />
+        </div>
+
+        <div>
+          <label for="email"> Enter yout email </label>
+          <input type="email" name="email" id="email" />
+        </div>
+
+        <div>
+          <textarea name="desc" id="" cols="30" rows="10">
+                desc
+            </textarea
+          >
+        </div>
+
+        <button type="submit">Send</button>
+      </form>
+      <a href="back.php">Get_headers</a>
+    </main>
+  </body>
+</html>
