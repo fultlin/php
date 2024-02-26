@@ -21,36 +21,28 @@
             if ($equation[$i] == '+') {
                 $operand = '+';
                 $opernd_i = $i;
-                $left = explode(' * ', substr($equation, 0, strpos($equation,$equals)));
-                $leftItem = trim($left[0], ' ');
-                $right_item = trim($left[1], ' ');
             }
 
             if ($equation[$i] == '-') {
                 $operand = '-';
                 $opernd_i = $i;
-                $left = explode(' * ', substr($equation, 0, strpos($equation,$equals)));
-                $leftItem = trim($left[0], ' ');
-                $right_item = trim($left[1], ' ');
             }
 
             if ($equation[$i] == '*') {
                 $operand = '*';
                 $opernd_i = $i;
-                $left = explode(' * ', substr($equation, 0, strpos($equation,$equals)));
-                $leftItem = trim($left[0], ' ');
-                $right_item = trim($left[1], ' ');
             }
 
             
             if ($equation[$i] == '/') {
                 $operand = '/';
                 $opernd_i = $i;
-                $left = explode(' * ', substr($equation, 0, strpos($equation,$equals)));
-                $leftItem = trim($left[0], ' ');
-                $right_item = trim($left[1], ' ');
             }
         };
+
+        $left = explode(' * ', substr($equation, 0, strpos($equation,$equals)));
+        $leftItem = trim($left[0], ' ');
+        $right_item = trim($left[1], ' ');
 
         if ($leftItem == 'x' && $operand=='+') {
             $x = 'Первое число';
