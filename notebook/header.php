@@ -22,20 +22,22 @@
         <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="?p=view">Просмотр</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="?p=add">Добавление записей</a>
-                    </l>
-                    <li class="nav-item">
-                    <a class="nav-link" href="?p=update">Редактирование записей</a>
+                        <a class="nav-link <?php if ($_GET['p']=='view') echo 'active';?>" href="?p=view">Просмотр</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="?p=delete">Удаление записей</a>
+                        <a class="nav-link <?php if ($_GET['p']=='add') echo 'active';?>" aria-current="page" href="?p=add">Добавление записей</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?php if ($_GET['p']=='update') echo 'active';?>" href="?p=update">Редактирование записей</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?php if ($_GET['p']=='delete') echo 'active';?>" href="?p=delete">Удаление записей</a>
                     </li>
                 </ul>
                 </div>
