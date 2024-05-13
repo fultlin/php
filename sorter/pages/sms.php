@@ -6,7 +6,7 @@ if (isset($_GET['o'])) {
 }elseif (isset($_POST['sms'])) {
     $channel_id = $_POST['channel_id'];
     $hash_id = $_POST['#_id'];
-    $sql = "SELECT * FROM `sms` WHERE `channel_id`= '$channel_id' OR `#_id`= '$hash_id' ";
+    $sql = "SELECT * FROM `sms` WHERE `channel_id`= '$channel_id' AND `#_id`= '$hash_id' ";
 } else {
     $sql = 'SELECT * FROM sms';
 }
