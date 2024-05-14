@@ -21,6 +21,6 @@ class MainController{
     }
 
     public function sayBye(string $name){
-        $this->view->renderHtml('main/bye', ['name'=>$name])
+        $this->view->renderHtml('main/bye', ['name'=>$name]);
     }
 }

@@ -28,9 +28,23 @@ use src\Models\Users\User;
             return $this->createdAt;
         }
 
+        public function setTitle(string $title){
+            $this->title = $title;
+        }
+
+        public function setText(string $text){
+            $this->text = $text;
+        }
+
+        public function setAuthorId(int $authorId){
+            $this->authorId = $authorId;
+        }
+
+
         protected static function getTableName(){
             return 'articles';
         }
+
     }
 
     
