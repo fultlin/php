@@ -66,7 +66,18 @@ abstract class ActiveRecordEntity{
     }
 
     private function update() {
-
+        $db = Db::getInstance();
+        $data = $this->getPropertyToDB();
+        $params = [];
+        $paramsAndValue = [];
+        foreach ($data as $property => $value) {
+            $param = ':'.$property;
+            $params[] = '`'.$property.'`='.$param;
+            $paramsAndValue[$param] = $value;
+        }
+        $sql = 'UPDATE `'.static::getTableName().'` 
+                SET '.implode(',', $params).' WHERE `id`=:id';
+        $db->query($sql, $paramsAndValue, static::class);
     }
 
     private function getPropertyToDB():array{
