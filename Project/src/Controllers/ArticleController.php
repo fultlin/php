@@ -55,7 +55,9 @@ class ArticleController{
     }
 
     public function delete(int $id){
-
+        $article = Article::getById($id);
+        $article->delete();
+        header('Location:php/Project/www/articles');
     }
 
 }

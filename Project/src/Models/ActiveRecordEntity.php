@@ -80,6 +80,12 @@ abstract class ActiveRecordEntity{
         $db->query($sql, $paramsAndValue, static::class);
     }
 
+    public function delete() {
+        $db = Db::getInstance();
+        $sql = 'DELETE FROM `'.static::getTableName().'` WHERE `id`=:id';
+        $db->query($sql, [':id'=>$this->id], static::class);
+    }
+
     private function getPropertyToDB():array{
         $nameAndValue = [];
         $reflector = new \ReflectionObject($this);
